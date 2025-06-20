@@ -180,9 +180,12 @@
                 <h2 class="section-title">WHAT OUR CLIENTS SAY</h2>
                 <p class="section-subtitle">Real reviews from satisfied customers</p>
             </div>
-            <div class="testimonials-carousel">
-                <div class="testimonial-track" id="testimonial-track">
-                    <div class="testimonial-card active">
+            <div class="testimonials-wrapper">
+                <div class="testimonial-container">
+                    <div class="testimonial-card active" data-testimonial="0">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -195,7 +198,11 @@
                             <strong>Ashley Brichter</strong>
                         </div>
                     </div>
-                    <div class="testimonial-card">
+                    
+                    <div class="testimonial-card" data-testimonial="1">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -208,7 +215,11 @@
                             <strong>K.J. Morgan</strong>
                         </div>
                     </div>
-                    <div class="testimonial-card">
+                    
+                    <div class="testimonial-card" data-testimonial="2">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -221,7 +232,11 @@
                             <strong>Tyler Gillespie</strong>
                         </div>
                     </div>
-                    <div class="testimonial-card">
+                    
+                    <div class="testimonial-card" data-testimonial="3">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -235,17 +250,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-controls">
-                    <button class="testimonial-btn prev" id="prev-testimonial">
+                
+                <div class="testimonial-navigation">
+                    <button class="nav-arrow prev" id="prev-testimonial">
                         <i class="fas fa-chevron-left"></i>
                     </button>
-                    <div class="testimonial-dots" id="testimonial-dots">
-                        <span class="dot active" data-slide="0"></span>
-                        <span class="dot" data-slide="1"></span>
-                        <span class="dot" data-slide="2"></span>
-                        <span class="dot" data-slide="3"></span>
+                    <div class="testimonial-indicators">
+                        <span class="indicator active" data-slide="0"></span>
+                        <span class="indicator" data-slide="1"></span>
+                        <span class="indicator" data-slide="2"></span>
+                        <span class="indicator" data-slide="3"></span>
                     </div>
-                    <button class="testimonial-btn next" id="next-testimonial">
+                    <button class="nav-arrow next" id="next-testimonial">
                         <i class="fas fa-chevron-right"></i>
                     </button>
                 </div>
