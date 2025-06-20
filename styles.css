@@ -607,14 +607,13 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: none;
     margin: 0;
     opacity: 0;
-    transform: translateX(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    overflow: hidden;
+    transition: opacity 0.4s ease;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .testimonial-card.active {
     opacity: 1;
-    transform: translateX(0);
 }
 
 .stars {
