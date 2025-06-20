@@ -510,47 +510,19 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    border-radius: 15px;
 }
 
-.placeholder-image {
+.gallery-image img {
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    object-fit: cover;
     transition: all 0.3s ease;
 }
 
-.gallery-item:hover .placeholder-image {
+.gallery-item:hover .gallery-image img {
     transform: scale(1.05);
-}
-
-.sprinkler-bg {
-    background: linear-gradient(45deg, var(--grass-green), var(--grass-green-light)),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="3" fill="white" opacity="0.3"/><path d="M50 50 L45 35 M50 50 L55 35 M50 50 L65 45 M50 50 L65 55 M50 50 L55 65 M50 50 L45 65 M50 50 L35 55 M50 50 L35 45" stroke="white" stroke-width="1" opacity="0.4"/></svg>');
-    background-blend-mode: overlay;
-}
-
-.lawn-bg {
-    background: linear-gradient(135deg, var(--grass-green-light), var(--grass-green)),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="lawn" width="5" height="5" patternUnits="userSpaceOnUse"><path d="M2.5 5 L2.5 3 Q2.5 1 3.5 1 Q2.5 0 1.5 1 Q2.5 1 2.5 0" fill="rgba(255,255,255,0.2)"/></pattern></defs><rect width="100" height="100" fill="url(%23lawn)"/></svg>');
-}
-
-.before-after-bg {
-    background: linear-gradient(90deg, var(--soft-tan) 50%, var(--grass-green) 50%);
-}
-
-.smart-irrigation-bg {
-    background: linear-gradient(45deg, var(--grass-green-dark), var(--grass-green)),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="40" y="40" width="20" height="10" fill="white" opacity="0.3"/><circle cx="30" cy="30" r="2" fill="white" opacity="0.4"/><circle cx="70" cy="70" r="2" fill="white" opacity="0.4"/></svg>');
-}
-
-.edging-bg {
-    background: linear-gradient(180deg, var(--grass-green) 70%, var(--soft-tan) 70%);
-}
-
-.maintenance-bg {
-    background: linear-gradient(45deg, var(--grass-green), var(--grass-green-light), var(--soft-tan));
 }
 
 .gallery-overlay {
@@ -1110,6 +1082,10 @@ h1, h2, h3, h4, h5, h6 {
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
     }
     
 
