@@ -602,14 +602,17 @@ h1, h2, h3, h4, h5, h6 {
     min-width: 100%;
     background: var(--white);
     padding: 3rem 2rem;
-    border-radius: 20px;
+    border-radius: 20px !important;
     text-align: center;
     box-shadow: none;
     margin: 0;
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.3s ease;
     position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--light-tan);
+    will-change: opacity;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 .testimonial-card.active {
