@@ -386,7 +386,6 @@ h1, h2, h3, h4, h5, h6 {
     gap: 3rem;
     color: var(--white);
     animation: fadeInUp 1s ease 1s both;
-    width: 100%;
 }
 
 .feature {
