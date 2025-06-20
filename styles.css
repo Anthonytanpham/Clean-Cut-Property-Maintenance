@@ -512,51 +512,17 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     overflow: hidden;
     border-radius: 15px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+}
+
+.gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: all 0.3s ease;
 }
 
-.gallery-item:hover .gallery-image {
+.gallery-item:hover .gallery-image img {
     transform: scale(1.05);
-}
-
-/* Gallery Background Patterns */
-.sprinkler-install-bg {
-    background: linear-gradient(135deg, var(--grass-green), var(--grass-green-dark)),
-                radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3) 2px, transparent 2px),
-                radial-gradient(circle at 70% 70%, rgba(255,255,255,0.2) 1px, transparent 1px);
-    background-size: 100%, 20px 20px, 15px 15px;
-}
-
-.lawn-sprinkler-bg {
-    background: linear-gradient(45deg, #27ae60, var(--grass-green)),
-                repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(255,255,255,0.1) 10px, rgba(255,255,255,0.1) 20px);
-}
-
-.garden-irrigation-bg {
-    background: linear-gradient(135deg, var(--grass-green-light), var(--grass-green)),
-                radial-gradient(ellipse at center, rgba(255,255,255,0.2) 30%, transparent 70%);
-}
-
-.smart-irrigation-bg {
-    background: linear-gradient(45deg, var(--grass-green-dark), #2ecc71),
-                linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
-                linear-gradient(-45deg, rgba(255,255,255,0.1) 25%, transparent 25%);
-    background-size: 100%, 30px 30px, 30px 30px;
-}
-
-.professional-install-bg {
-    background: linear-gradient(180deg, var(--grass-green) 60%, var(--soft-tan) 60%),
-                repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(255,255,255,0.1) 5px, rgba(255,255,255,0.1) 10px);
-}
-
-.seasonal-maintenance-bg {
-    background: linear-gradient(135deg, #16a085, var(--grass-green), var(--grass-green-light)),
-                radial-gradient(circle at 25% 75%, rgba(255,255,255,0.2) 3px, transparent 3px),
-                radial-gradient(circle at 75% 25%, rgba(255,255,255,0.15) 2px, transparent 2px);
-    background-size: 100%, 25px 25px, 20px 20px;
 }
 
 .gallery-overlay {
