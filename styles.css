@@ -376,16 +376,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-features {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 3rem;
     color: var(--white);
     animation: fadeInUp 1s ease 1s both;
+    margin-top: 3rem;
+    text-align: center;
 }
 
 .feature {
