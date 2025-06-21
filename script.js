@@ -91,6 +91,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     let currentTestimonial = 0;
     const totalTestimonials = testimonialCards.length;
+    let testimonialInterval;
+    let userHasInteracted = false;
     
     function showTestimonial(index) {
         // Remove active from all cards and indicators
@@ -116,25 +118,44 @@ document.addEventListener('DOMContentLoaded', function() {
         showTestimonial(currentTestimonial);
     }
     
+    function stopAutoAdvance() {
+        if (testimonialInterval) {
+            clearInterval(testimonialInterval);
+            testimonialInterval = null;
+        }
+        userHasInteracted = true;
+    }
+    
     // Event listeners for testimonial navigation
     if (nextBtn) {
-        nextBtn.addEventListener('click', nextTestimonial);
+        nextBtn.addEventListener('click', function() {
+            stopAutoAdvance();
+            nextTestimonial();
+        });
     }
     
     if (prevBtn) {
-        prevBtn.addEventListener('click', prevTestimonial);
+        prevBtn.addEventListener('click', function() {
+            stopAutoAdvance();
+            prevTestimonial();
+        });
     }
     
     // Indicator navigation
     indicators.forEach((indicator, index) => {
         indicator.addEventListener('click', function() {
+            stopAutoAdvance();
             currentTestimonial = index;
             showTestimonial(currentTestimonial);
         });
     });
     
-    // Auto-advance testimonials every 6 seconds
-    setInterval(nextTestimonial, 6000);
+    // Auto-advance testimonials every 6 seconds (only if user hasn't interacted)
+    testimonialInterval = setInterval(function() {
+        if (!userHasInteracted) {
+            nextTestimonial();
+        }
+    }, 6000);
     
     // Form handling
     const contactForm = document.getElementById('contact-form');
