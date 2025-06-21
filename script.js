@@ -95,17 +95,28 @@ document.addEventListener('DOMContentLoaded', function() {
     let userHasInteracted = false;
     
     function showTestimonial(index) {
-        // Remove active from all cards and indicators
-        testimonialCards.forEach(card => card.classList.remove('active'));
-        indicators.forEach(indicator => indicator.classList.remove('active'));
+        // Ensure index is within bounds
+        if (index < 0) index = totalTestimonials - 1;
+        if (index >= totalTestimonials) index = 0;
         
-        // Add active to current card and indicator
-        if (testimonialCards[index]) {
-            testimonialCards[index].classList.add('active');
-        }
-        if (indicators[index]) {
-            indicators[index].classList.add('active');
-        }
+        // Remove active from all cards and indicators
+        testimonialCards.forEach(card => {
+            card.classList.remove('active');
+        });
+        indicators.forEach(indicator => {
+            indicator.classList.remove('active');
+        });
+        
+        // Small delay to ensure smooth transition
+        setTimeout(() => {
+            // Add active to current card and indicator
+            if (testimonialCards[index]) {
+                testimonialCards[index].classList.add('active');
+            }
+            if (indicators[index]) {
+                indicators[index].classList.add('active');
+            }
+        }, 100);
     }
     
     function nextTestimonial() {
